@@ -1,0 +1,25 @@
+.wrapper {
+  height: 100%;
+}
+
+.content {
+  position: absolute;
+  top: 70%;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+}
+
+.child-div {
+  text-align: center;
+}
+
+.Home_li {
+  transform: skewX(1deg);
+  list-style: circle;
+  display: block;
+}
+
+.Home_li li {
+  list-style: circle;
+}
