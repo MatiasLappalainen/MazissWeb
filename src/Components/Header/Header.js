@@ -1,29 +1,58 @@
 import React from 'react'
 import './Header.css'
 import Nav from './Nav'
+import SocialNav from './SocialNav'
 
 
 class Header extends React.Component{
 
+  constructor(props){
+    super(props);
+    this.state = {
+      Header: {
+      backgroundColor: 'transparent',
+      boxShadow: 'none'
+
+    },
+    HeaderHelp: {
+      color: 'white'
+    }
+    }
+  }
 
   componentDidMount(){
-    window.addEventListener('scrollstop', this.scrollEvent.bind(this));
+    window.addEventListener('scroll', this.handleScroll.bind(this));
   }
+
   componentWillUnMount(){
-    window.addEventListener('scrollstop', this.scrollEvent.bind(this));
+    window.removeEventListener('scroll', this.handleScroll.bind(this));
+
   }
 
-  scrollEvent(event){
+  handleScroll(props){
 
-    let el = document.getElementById('Header');
-    console.log('It happened');
+    if(window.scrollY > 40){
+      this.setState({Header: {backgroundColor: 'white'}, HeaderHelp:{color: 'blue'}});
+      var s = document.getElementsByClassName('seperator');
+      for(var i = 0; i < s.length; i++){
+        s[i].style.visibility = 'visible';
+      }
+    }else if(window.scrollY < 40){
+      this.setState({Header: {backgroundColor: 'transparent', boxShadow: 'none'}, HeaderHelp: {color: 'white'}});
+      var s = document.getElementsByClassName('seperator');
+      for(var i = 0; i < s.length; i++){
+        s[i].style.visibility = 'hidden';
+      }
+    }
   }
-
 
   render () {
     return (
-      <div className="Header" id="Header">
-        <Nav />
+      <div className="Header" id="Header" style={this.state.Header}>
+        <div className="header-help" style={this.state.HeaderHelp}>
+        <Nav styles={this.state.HeaderHelp}/>
+        <SocialNav styles={this.state.HeaderHelp}/>
+        </div>
       </div>
     )
   }

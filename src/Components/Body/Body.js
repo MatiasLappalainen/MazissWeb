@@ -1,17 +1,20 @@
 import React from 'react'
 import '../../index.css'
 import './Body.css'
-import Footer from '../Footer/Footer'
+import LandingText from './LandingText'
 
 
 class Body extends React.Component{
+
+
   render () {
     return (
       <div className="wrapper">
         <div className="BodyComponent">
+          <LandingText text="Matias Lappalainen" textTwo="Coffee drinker and A small beast"/>
         </div>
-        <div className="content" id="content">
-          <div>{this.props.children}</div>
+        <div className="content" id="content" >
+          <div className="content-helper">{this.props.children}</div>
         </div>
       </div>
     )
