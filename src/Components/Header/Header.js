@@ -39,9 +39,9 @@ class Header extends React.Component{
       }
     }else if(window.scrollY < 40){
       this.setState({Header: {backgroundColor: 'transparent', boxShadow: 'none'}, HeaderHelp: {color: 'white'}});
-      var s = document.getElementsByClassName('seperator');
-      for(var i = 0; i < s.length; i++){
-        s[i].style.visibility = 'hidden';
+      var y = document.getElementsByClassName('seperator');
+      for(var j = 0; j < y.length; j++){
+        y[j].style.visibility = 'hidden';
       }
     }
   }

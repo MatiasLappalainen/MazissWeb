@@ -1,29 +1,34 @@
 import React from 'react'
 import { Link } from 'react-router'
 
+var position = 0;
 
-
-function scrollTo(element, from, duration, scrollTop){
+function scrollTo(element, duration, scrollTop){
     if(duration <= 0) return;
+    var elementAb = element;
     var perTick = 1000 / duration*10;
-    scrollTop = scrollTop + perTick;
+    scrollTop += perTick;
     setTimeout(function(){
       window.scrollTo(0, scrollTop);
-      if(scrollTop > element) return;
-      scrollTo(element, from, duration, scrollTop);
+      if(element-80 < scrollTop) return;
+      scrollTo(elementAb, duration, scrollTop);
     }, 10);
   }
-
 class ListItem extends React.Component{
 
 
+  componentDidMount(){
+  }
 
   handleScroll(){
-
+    if(position !== 0){
       if(document.getElementById('content').getBoundingClientRect().top > 101){
-        scrollTo(document.getElementById('content').getBoundingClientRect().top, 0, 600, 0);
+      scrollTo(position, 500, window.scrollY);
       }else{return}
-
+    }else{
+      position = document.getElementById('content').getBoundingClientRect().top;
+      scrollTo(position, 500, window.scrollY);
+    }
   }
 
 

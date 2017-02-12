@@ -6,7 +6,7 @@ class LandingText extends React.Component{
     return (
       <div className="landing-wrapper">
         <h1 className="landingText">{this.props.text}</h1>
-        <tr />
+        <hr />
         <h2 className="landingText">{this.props.textTwo}</h2>
         </div>
     )

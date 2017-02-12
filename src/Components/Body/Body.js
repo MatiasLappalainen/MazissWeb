@@ -1,8 +1,7 @@
 import React from 'react'
 import '../../index.css'
 import './Body.css'
-import LandingText from './LandingText'
-
+import BodyComponent from './BodyComponent'
 
 class Body extends React.Component{
 
@@ -10,11 +9,13 @@ class Body extends React.Component{
   render () {
     return (
       <div className="wrapper">
-        <div className="BodyComponent">
-          <LandingText text="Matias Lappalainen" textTwo="Coffee drinker and A small beast"/>
-        </div>
+        <BodyComponent />
         <div className="content" id="content" >
+          <div className="positioner">
+          <div className="next"><i className="arrow-img" height="50px" width="50px"></i></div>
+          </div>
           <div className="content-helper">{this.props.children}</div>
+
         </div>
       </div>
     )
