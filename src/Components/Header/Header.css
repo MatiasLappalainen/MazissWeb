@@ -19,6 +19,14 @@
   width: 100%;
 }
 
+.header-button {
+  visibility: hidden;
+  width: 100px;
+  height: 100px;
+  border-radius: 10px;
+  background-color: gray;
+}
+
 .nav-div {
   align-self: center;
 }

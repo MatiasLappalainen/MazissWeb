@@ -18,7 +18,7 @@ export default React.createClass({
           <h1>About</h1>
         </div>
         <div className="about-list">
-          <p>I&#39;m student who currently studies in Helsingin Medialukio. I&#39;ve been programming for 2 years as a hobby. I have mainly done web base programming with technologies like Polymer, React, PHP, Javascript, HTML, CSS</p>
+          <p>I&#39;m a student who's currently studying in Helsingin Medialukio. I&#39;ve been programming for two-years as a hobby. My skills include mostly web programming technologies like Polymer, React, PHP, Javascript, HTML, CSS, SCSS</p>
         </div>
       <PhotoElement className="img-responsive" src={src} height="400px" width="266px" mode="fill"/>
       </div>

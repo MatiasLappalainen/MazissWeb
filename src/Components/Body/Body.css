@@ -33,16 +33,15 @@
   list-style: circle;
   display: block;
   margin: auto;
-  width: 100%;
   text-align: left;
   padding: 0;
 }
 
 #home {
-  width: 30%;
   float: left;
   color: gray;
   border-radius: 8px;
+  margin: 25px 0;
   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
   }
 
@@ -119,12 +118,12 @@
 }
 
 .Timer-wrapper{
-  width: 50%;
+  width:100%;
   height: 323px;
-  float:right;
+  text-align: center;
   display: inline-flex;
   justify-content: center;
-  margin-left: 20px;
+  margin: 25px 0;
   padding: 20px 60px;
   background: linear-gradient(to left, #457fca , #5691c8);
   border-radius: 10px;
@@ -196,10 +195,7 @@ hr {
 }
 
 .landing {
-  width: 60%;
   margin: auto;
-  height: 80vh;
-
 }
 
 .home_info {
@@ -294,12 +290,3 @@ hr {
     transform: translateY(0);
   }
 }
-
-@media (min-width: 320px){
-
-}
-@media (min-width: 481px){}
-@media (min-width: 641px){}
-@media (min-width: 961px){}
-@media (min-width: 1025px){}
-@media (min-width: 1281px){}
