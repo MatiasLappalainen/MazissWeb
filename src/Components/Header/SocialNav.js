@@ -1,5 +1,4 @@
 import React from 'react'
-import './Header.css'
 import SocialIcon from './SocialIcon'
 
 class SocialNav extends React.Component{

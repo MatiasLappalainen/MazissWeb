@@ -1,5 +1,5 @@
 import React from 'react'
-import './Body.css'
+
 
 let style = {
   width: '100% !important',
@@ -36,8 +36,8 @@ class DayCoffeeTimer extends React.Component{
   render () {
     return (
       <div className="Timer-wrapper">
-        <div className="Timer" style={style} onMouseEnter={this.onMouseEnter.bind(this)} onMouseLeave={this.onMouseLeave.bind(this)}><div className="timer-el"><h1>{this.state.time}</h1></div></div>
-        <div className="Timer" style={style} onMouseEnter={this.onMouseEnter.bind(this)} onMouseLeave={this.onMouseLeave.bind(this)}><div className="timer-el"><h1>{this.state.coffee}</h1></div></div>
+        <div className="Timer" style={style} onMouseEnter={this.onMouseEnter.bind(this)} onMouseLeave={this.onMouseLeave.bind(this)}><div className="timer-el helper"><h1>{this.state.time}</h1></div></div>
+        <div className="Timer" style={style} onMouseEnter={this.onMouseEnter.bind(this)} onMouseLeave={this.onMouseLeave.bind(this)}><div className="timer-el helper"><h1>{this.state.coffee}</h1></div></div>
       </div>
     )
   }

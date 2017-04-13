@@ -4,7 +4,7 @@ class SocialIcon extends React.Component{
   render () {
     return (
 
-      <li><a style={this.props.styles} className={this.props.class} href={this.props.to} target="_blank"></a></li>
+      <li><a rel="noopener" style={this.props.styles} className={this.props.class} href={this.props.to} target="_blank"></a></li>
 
     )
   }

@@ -1,19 +1,22 @@
 import React from 'react'
 import LandingText from './LandingText'
+import imgurlFull from './../../lasku.webp'
+import imgurlMin from './../../Lasku1080.webp'
 
 let yTrans = 0;
 let lastPos = window.pageYOffset;
 
-
+let media = window.matchMedia('(max-width: 810px)');
 
 class BodyComponent extends React.Component{
-
 
   constructor(props){
     super(props);
 
-    this.state = {transform: 'translateY(' + yTrans + 'px)'}
+    this.state = {transform: 'translateY(' + yTrans + 'px)', backgroundImage: 'url('+ imgurlFull + ')'}
+
   }
+
 
   beforeScroll(props){
 
@@ -48,10 +51,19 @@ class BodyComponent extends React.Component{
 
 }
 
+  handleChange(props){
+    if(media.matches === false){
+      return;
+    }else if(media.matches === true){
+      console.log("We are Here"),
+      this.setState({backgroundImage: 'url('+ imgurlMin + ')'})
+    }
+  }
 
   componentDidMount(){
     //Handle updates
-    setInterval(window.addEventListener('scroll', this.beforeScroll.bind(this), false), 50)
+    setInterval(window.addEventListener('scroll', this.beforeScroll.bind(this), false), 50);
+    window.addEventListener('change', this.handleChange.bind(this), false);
   }
 
   componentWillUnMount(){
@@ -63,7 +75,7 @@ class BodyComponent extends React.Component{
 
   render () {
     return (
-      <div className="BodyComponent" style={this.state}>
+      <div className="BodyComponent" id="body" style={this.state}>
         <LandingText text="Matias Lappalainen" textTwo="Programmer &amp; Designer"/>
       </div>
     )

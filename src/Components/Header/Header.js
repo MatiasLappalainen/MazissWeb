@@ -1,7 +1,7 @@
 import React from 'react'
-import './Header.css'
 import Nav from './Nav'
 import SocialNav from './SocialNav'
+import HeaderOpen from './../Header/HeaderOpen'
 
 
 class Header extends React.Component{
@@ -21,7 +21,17 @@ class Header extends React.Component{
   }
 
   componentDidMount(){
-    window.addEventListener('scroll', this.handleScroll.bind(this));
+
+    let media = window.matchMedia("(min-width: 811px)");
+
+    if(media.matches === true){
+
+      window.addEventListener('scroll', this.handleScroll.bind(this));
+
+    }else if(media.matches === false){
+      window.removeEventListener('scroll', this.handleScroll);
+      this.setState({Header: {backgroundColor: 'white'}, HeaderHelp:{color: 'blue'}});
+  }
   }
 
   componentWillUnMount(){
@@ -48,11 +58,14 @@ class Header extends React.Component{
 
   render () {
     return (
+      <div>
+        <HeaderOpen />
       <div className="Header" id="Header" style={this.state.Header}>
         <div className="header-help" style={this.state.HeaderHelp}>
         <Nav styles={this.state.HeaderHelp}/>
         <SocialNav styles={this.state.HeaderHelp}/>
         </div>
+      </div>
       </div>
     )
   }

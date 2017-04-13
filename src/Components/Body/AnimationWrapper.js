@@ -3,11 +3,23 @@ import React from 'react'
 
 class AnimationWrapper extends React.Component{
 
+  beforeScroll(props){
+
+    //request AnimationFrames
+    var requestAnimationFrame = window.requestAnimationFrame ||
+    window.mozRequestAnimationFrame ||
+    window.webkitRequestAnimationFrame ||
+    window.msRequestAnimationFrame ||
+    window.oRequestAnimationFrame;
+    //Go to Function
+    requestAnimationFrame(this.handleScroll.bind(this));
+  }
+
   componentDidMount(){
-    window.addEventListener('scroll', this.handleScroll);
+    window.addEventListener('scroll', this.beforeScroll.bind(this));
   }
   componentWillUnMount(){
-    window.removeEventListener('scroll', this.handleScroll);
+    window.removeEventListener('scroll', this.beforeScroll.bind(this));
   }
 
   handleScroll(){

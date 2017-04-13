@@ -1,5 +1,5 @@
 import React from 'react'
-import './Body.css'
+
 
 class LandingText extends React.Component{
   render () {
