@@ -306,6 +306,10 @@ li.seperator {
   margin: auto;
   text-align: left;
   padding: 0;
+  width: 80%;
+}
+#contact-p {
+  font-size: 24px;
 }
 
 #home {
@@ -321,6 +325,7 @@ li.seperator {
   padding: 20px 25px;
   border-bottom: 1px solid rgba(128,128,128, 0.3);
   transition: 0.5s linear;
+  font-size: 2em;
 }
 
 .Home_li li a {
@@ -329,23 +334,6 @@ li.seperator {
 
 .Home_li li:hover {
   background-color: rgba(128,128,128, 0.3);
-}
-
-.Home_li li::before {
-  content: '';
-  display: inline-block;
-  width: 5px;
-  height: 12px;
-  background-color: blue;
-  margin-right: 5px;
-  border-radius: 20px;
-  transition: 0.5s linear;
-}
-
-
-
-.Home_li li:hover:before {
-  background-color: red;
 }
 
 .Home_li h2 {
@@ -357,12 +345,6 @@ li.seperator {
   color: white;
 }
 
-.Home_li h1 {
-  margin: 0 !important;
-  padding: 20px;
-  background: linear-gradient(to left, #457fca , #5691c8);
-  border-radius: 10px 10px 0 0;
-}
 
 .contact-wrapper {
   margin: 30px;
@@ -563,6 +545,36 @@ hr {
   height: 20px;
   background-color: blue;
 
+}
+
+
+.item {
+  height: 300px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  transition: 0.5s linear;
+}
+.item:hover {
+  cursor: pointer;
+  background-color: silver;
+
+}
+
+.item-hover {
+  opacity: 0;
+}
+
+.item-hover:hover {
+  opacity: 100;
+}
+
+
+.inline {
+  display: inline-flex;
+}
+
+.wrapper-ex {
+  margin: 100px;
+  
 }
 
 @media (max-width: 481px){

@@ -16,7 +16,7 @@ class Nav extends React.Component{
           <li className="seperator"><span>/</span></li>
           <ListItem styles={this.props.styles} to="About" text="About" />
           <li className="seperator"><span>/</span></li>
-          <li className="nav-li"><a rel="noopener" href="https://drive.google.com/file/d/0B8L01heyYG3cMDVYdHhTSVdRYmc/view?usp=sharing" target="_blank"><span id="resume" style={this.props.styles}>Resume</span></a></li>
+          <ListItem styles={this.props.styles} to="Portfolio" text="Portfolio" />
         </ul>
       </nav>
     </div>

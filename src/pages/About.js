@@ -21,7 +21,7 @@ export default React.createClass({
         <div className="about-list helper">
           <p>I&#39;m a student who's currently studying in Helsingin Medialukio. I&#39;ve been programming for two-years as a hobby. My skills include mostly web programming technologies like Polymer, React, PHP, Javascript, HTML, CSS, SCSS</p>
         </div>
-      <PhotoElement className="img-responsive" src={src} height="400px" width="266px" mode="fill"/>
+        <PhotoElement className="img-responsive" src={src} height="400px" width="266px" mode="fill"/>
       </div>
     </div>
   </div>

@@ -23,10 +23,9 @@ class AnimationWrapper extends React.Component{
   }
 
   handleScroll(){
-
+    //timeout
     setTimeout(function () {
-
-
+    //Get offsets
     let parElement = document.getElementById('animation'),
         parElementTop = parElement.offsetTop,
         element = document.getElementById('home_h1'),

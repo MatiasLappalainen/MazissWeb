@@ -8,6 +8,7 @@ import {Router, Route, IndexRedirect, hashHistory} from 'react-router';
 import About from './pages/About';
 import Contact from './pages/Contact';
 import Home from './pages/Home';
+import Portfolio from './pages/Portfolio';
 import NotFound from "./pages/NotFound";
 
 
@@ -19,6 +20,7 @@ ReactDOM.render(
       <Route path="Home" component={Home}></Route>
       <Route path="About" component={About}></Route>
       <Route path="Contact" component={Contact}></Route>
+      <Route path="Portfolio" component={Portfolio}></Route>
       <Route path="*" component={NotFound}></Route>
     </Route>
   </Router>,
