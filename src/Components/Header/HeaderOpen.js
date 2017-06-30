@@ -34,7 +34,7 @@ class HeaderOpen extends React.Component{
 
   render () {
     return (
-      <a href="#" className="Open" id="open" onClick={this.handleClick.bind(this)} style={this.state.styles}><i className="fa fa-bars fa-3x" aria-hidden="true"></i></a>
+      <button className="Open" id="open" onClick={this.handleClick.bind(this)} style={this.state.styles}><i className="fa fa-bars fa-3x" aria-hidden="true"></i></button>
     )
   }
 }

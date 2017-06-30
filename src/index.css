@@ -102,7 +102,7 @@ body {
   transform: skewX(19deg);
 }
 
-.nav li a:hover, a:active, a:visited {
+.nav li a:hover, a:active,a:visited {
   color: white;
   background-color: #21629a;
   border: none;
@@ -513,7 +513,7 @@ hr {
   margin-bottom: 20px;
   text-align: center;
   height: 500px;
-
+  display: inline-block;
 }
 
 .Skills-wrapper{
@@ -531,9 +531,11 @@ hr {
 
 .Horizontal {
     overflow-x:scroll;
-     overflow-y:hidden;
-     white-space:nowrap;
+    overflow-y:hidden;
+    white-space:nowrap;
 }
+
+
 
 .skillBar {
   width: 100%;

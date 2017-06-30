@@ -1,6 +1,6 @@
 import React from 'react'
 import LandingText from './LandingText'
-import imgurlFull from './../../lasku.webp'
+import imgurlFull from './../../IMG_0487.jpg'
 import imgurlMin from './../../Lasku1080.webp'
 
 let yTrans = 0;
@@ -55,7 +55,6 @@ class BodyComponent extends React.Component{
     if(media.matches === false){
       return;
     }else if(media.matches === true){
-      console.log("We are Here"),
       this.setState({backgroundImage: 'url('+ imgurlMin + ')'})
     }
   }

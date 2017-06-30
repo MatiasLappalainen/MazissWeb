@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router'
+import { NavLink } from 'react-router-dom'
 
 
 
@@ -46,7 +46,7 @@ class ListItem extends React.Component{
   render () {
 
     return (
-      <li className="nav-li"><Link onClick={() => this.handleScroll()} to={this.props.to} activeClassName="active" style={this.props.styles}><span>{this.props.text}</span></Link></li>
+      <li className="nav-li"><NavLink onClick={() => this.handleScroll()} to={this.props.to} activeClassName="active" style={this.props.styles}><span>{this.props.text}</span></NavLink></li>
 
     )
   }
