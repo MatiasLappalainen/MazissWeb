@@ -1,21 +1,24 @@
 {
-  "name": "frontPage",
+  "name": "mazissweb",
   "version": "0.1.0",
   "private": true,
   "devDependencies": {
     "gh-pages": "^0.12.0",
-    "react-scripts": "1.0.6",
     "redux-devtools": "^3.3.2"
   },
   "dependencies": {
-    "react": "^15.5.4",
-    "react-bootstrap": "^0.30.7",
-    "react-dom": "^15.5.4",
-    "react-redux": "^5.0.2",
-    "react-router": "4.1.1",
-    "react-router-dom": "^4.1.1",
-    "react-scripts": "1.0.6",
-    "redux": "^3.6.0"
+    "address-bar-jump-fix": "^1.1.2",
+    "i": "^0.3.5",
+    "npm": "^5.3.0",
+    "react": "^15.6.1",
+    "react-bootstrap": "^0.31.3",
+    "react-dom": "^15.6.1",
+    "react-helmet": "^5.2.0",
+    "react-redux": "^5.0.6",
+    "react-router": "^4.2.0",
+    "react-router-dom": "^4.2.2",
+    "react-scripts": "^1.0.13",
+    "redux": "^3.7.2"
   },
   "scripts": {
     "start": "react-scripts start",

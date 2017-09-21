@@ -1,84 +1,84 @@
-import React from 'react'
-import LandingText from './LandingText'
-import imgurlFull from './../../IMG_0487.jpg'
-import imgurlMin from './../../Lasku1080.webp'
+import React from "react";
+import LandingText from "./LandingText";
+import imgurlFull from "./../../IMG_0487.jpg";
+import imgurlMin from "./../../Lasku1080.webp";
+import * as _ from 'lodash'
 
 let yTrans = 0;
 let lastPos = window.pageYOffset;
 
-let media = window.matchMedia('(max-width: 810px)');
+let media = window.matchMedia("(max-width: 810px)");
 
-class BodyComponent extends React.Component{
-
-  constructor(props){
+class BodyComponent extends React.Component {
+  constructor(props) {
     super(props);
 
-    this.state = {transform: 'translateY(' + yTrans + 'px)', backgroundImage: 'url('+ imgurlFull + ')'}
-
+    this.state = {
+      transform: "translateY(" + yTrans + "px)",
+      backgroundImage: "url(" + imgurlFull + ")"
+    };
   }
 
-
-  beforeScroll(props){
-
+  beforeScroll(props) {
     //request AnimationFrames
-    var requestAnimationFrame = window.requestAnimationFrame ||
-    window.mozRequestAnimationFrame ||
-    window.webkitRequestAnimationFrame ||
-    window.msRequestAnimationFrame ||
-    window.oRequestAnimationFrame;
+    var requestAnimationFrame =
+      window.requestAnimationFrame ||
+      window.mozRequestAnimationFrame ||
+      window.webkitRequestAnimationFrame ||
+      window.msRequestAnimationFrame ||
+      window.oRequestAnimationFrame;
     //Go to Function
     requestAnimationFrame(this.handleScroll.bind(this));
   }
 
-  handleScroll(props){
-
-
+  handleScroll(props) {
     //Get Window Top
     var ls = window.pageYOffset || document.documentElement.scrollTop;
 
-    if(ls > lastPos){
-      yTrans = -(ls*0.7).toFixed(2);
-      this.setState({transform: 'translateY(' + yTrans + 'px)'})
-
-    }else{
-      yTrans = -(ls*0.7).toFixed(2);
-      this.setState({transform: 'translateY(' + yTrans + 'px)'})
-
+    if (ls > lastPos) {
+      yTrans = -(ls * 0.7).toFixed(2);
+      this.setState({ transform: "translateY(" + yTrans + "px)" });
+    } else {
+      yTrans = -(ls * 0.7).toFixed(2);
+      this.setState({ transform: "translateY(" + yTrans + "px)" });
     }
 
-  lastPos = window.scrollY;
+    lastPos = window.scrollY;
+  }
 
-
-}
-
-  handleChange(props){
-    if(media.matches === false){
+  handleChange(props) {
+    if (media.matches === false) {
       return;
-    }else if(media.matches === true){
-      this.setState({backgroundImage: 'url('+ imgurlMin + ')'})
+    } else if (media.matches === true) {
+      this.setState({ backgroundImage: "url(" + imgurlMin + ")" });
     }
   }
 
-  componentDidMount(){
+  componentDidMount() {
     //Handle updates
-    setInterval(window.addEventListener('scroll', this.beforeScroll.bind(this), false), 50);
-    window.addEventListener('change', this.handleChange.bind(this), false);
+    setInterval(
+      window.addEventListener("scroll", this.beforeScroll.bind(this), false),
+      50
+    );
+    window.addEventListener("change", this.handleChange.bind(this), false);
   }
 
-  componentWillUnMount(){
-    clearInterval(window.removeEventListener('scroll', this.beforeScroll.bind(this)))
-
+  componentWillUnMount() {
+    clearInterval(
+      window.removeEventListener("scroll", this.beforeScroll.bind(this))
+    );
   }
 
-
-
-  render () {
+  render() {
     return (
       <div className="BodyComponent" id="body" style={this.state}>
-        <LandingText text="Matias Lappalainen" textTwo="Programmer &amp; Designer"/>
+        <LandingText
+          text="Matias Lappalainen"
+          textTwo="Front-end Developer &amp; Designer"
+        />
       </div>
-    )
+    );
   }
 }
 
-export default BodyComponent
+export default BodyComponent;

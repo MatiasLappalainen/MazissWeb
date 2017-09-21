@@ -1,13 +1,28 @@
-import React from 'react'
+import React from "react";
+import PropTypes from 'prop-types'
 
-class SocialIcon extends React.Component{
-  render () {
-    return (
 
-      <li><a rel="noopener noreferrer" style={this.props.styles} className={this.props.class} href={this.props.to} target="_blank"></a></li>
 
-    )
-  }
+const SocialIcon = ({ styles, className, to }) => {
+  return (
+    <li>
+      <a
+        rel="noopener noreferrer"
+        style={styles}
+        className="socialIcon"
+        href={to}
+        target="_blank"
+      >
+        <i className={className} />
+      </a>
+    </li>
+  );
+};
+
+export default SocialIcon;
+
+SocialIcon.PropTypes = {
+  styles: PropTypes.array,
+  className: PropTypes.string,
+  to: PropTypes.string
 }
-
-export default SocialIcon

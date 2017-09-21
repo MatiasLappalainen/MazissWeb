@@ -1,35 +1,21 @@
-import React from 'react'
+import React from "react";
 
-
-
-class SkillBar extends React.Component{
-
-  constructor(props){
+class SkillBar extends React.Component {
+  constructor(props) {
     super(props);
 
-    this.state = {style: {width: this.props.level + '%', textAlign: 'center'}}
+    this.state = {
+      style: { width: this.props.level + "%", textAlign: "center" }
+    };
   }
 
-  
-
-
-
-  render () {
-
-    let defaults = {
-      min: this.props.min || 0,
-      max: this.props.max || 100,
-      lvl: this.props.lvl || 0
-    }
-
+  render() {
     return (
-      <div className="skillBar" min={defaults.min} max={defaults.max} level={defaults.lvl}>
-          <div className="skillbar-bar" style={this.state.style}>
-
-          </div>
+      <div className="skillBar">
+        <div className="skillbar-bar" style={this.state.style} />
       </div>
-    )
+    );
   }
 }
 
-export default SkillBar
+export default SkillBar;
